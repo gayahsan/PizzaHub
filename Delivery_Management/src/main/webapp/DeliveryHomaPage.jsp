@@ -87,8 +87,7 @@
 	<div class="container h-100">
 
 		<!-- cards -->
-		</br>
-		</br>
+		</br> </br>
 		<div class="card-deck">
 			<div class="card">
 				<div class="img">
@@ -149,8 +148,7 @@
 			</div>
 
 		</div>
-		</br>
-		</br>
+		</br> </br>
 
 	</div>
 

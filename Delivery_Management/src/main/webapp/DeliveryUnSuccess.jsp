@@ -28,8 +28,7 @@
 			href="My_profile.jsp">My Profile</a> <a href="Exhibition.jsp">Exhibitions</a>
 		<a href="gallery_option.jsp">Gallery options</a> <a
 			href="upload_paintings.jsp">Upload Paintings</a> <a
-			href="frontpage.jsp">Logout</a> <a href="#" class="navbar1">
-			<%
+			href="frontpage.jsp">Logout</a> <a href="#" class="navbar1"> <%
 			HttpSession httpSession = request.getSession();
 			String id = request.getParameter("email");
 			httpSession.setAttribute("login1", id);

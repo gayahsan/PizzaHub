@@ -12,7 +12,13 @@
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
 
-
+<style>
+.repoBTN {
+	position: absolute;
+	margin-top: 3px;
+	margin-left: 3px;
+}
+</style>
 
 </head>
 <body>
@@ -78,11 +84,11 @@
 
 			ResultSet rs_2 = stmt.executeQuery(query_1);
 		%>
-		<div class="myRepo">
+		<div class="#">
 
-			<h1>Generate a Monthly Delivery Report</h1>
+			<h1><center>Generate a Monthly Delivery Report</center></h1>
 			<br>
-			<center>
+			<center>	
 				<table border="5">
 					<tr>
 						<th>Full name</th>
@@ -114,8 +120,12 @@
 			</center>
 
 			<br> <br>
-			<button onclick="generate_PDF();">Generate a Report</button>
-			<br>
+			<div class="container h-100">
+			<center>
+				<button onclick="generate_PDF();">Generate a Report</button>
+				</center>
+			</dfn>
+			</div></br>
 		</div>
 		<%
 		rs_2.close();

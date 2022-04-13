@@ -18,7 +18,31 @@
 	margin-top:-364px;
 	margin-left: 702px;
 	
-	}	
+	}
+	input[type=text], select {
+  width: 100%;
+  padding: 5px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 39%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}	
 </style>	
 	
 	
@@ -140,7 +164,7 @@
 	</tr>
 		<tr>
 		<td>RegCust_ID</td> 
-		<td><input type="text" id="Pid" name="Pid" placeholder="Your payment ID goes here" value="1"></td>
+		<td><input type="text" id="Pid" name="Pid" placeholder="Your payment ID goes here" value="2"></td>
 	</tr>
 		
 		

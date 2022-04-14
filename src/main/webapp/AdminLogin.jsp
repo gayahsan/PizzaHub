@@ -11,48 +11,46 @@
 <style>
 body {font-family: Arial, Helvetica, sans-serif; background-image: url("Images/food-3309418_1920.jpg");
 }
-/* Full-width input fields */
-input[type=text], input[type=password] {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  box-sizing: border-box;
-}
-
 .buttonL {
-  background-color: #d4ff00;
-  color: Black;
-  border: none;
+  background-color: black;
+  color: white;
   cursor: pointer;
-  width: 300px;
-  border:10px solid black;
+  width: 400px;
+  height:80px;
+  border:1px solid black;
+  border-radius:5px;
+  font-size: 25px;
+  
 }
 
 .buttonL:hover {
-  opacity: 0.8;
+  background-color:Black;
+  color:  #d4ff00; opacity: 0.8;
 }
 
-button {
-  background-color: #04AA6D;
-  color: white;
-  padding: 14px 20px;
-  
-  border: none;
+
+.btnhm {
+border: none;
   cursor: pointer;
-  width: 100%;
+  width:100%; color:white;
 }
 
-button:hover {
-  opacity: 0.8;
+
+
+.btnhm:hover{
+opacity: 0.8;
 }
+
+
+
 
 /* Extra styles for the cancel button */
 .cancelbtn {
+border: none;
+  cursor: pointer;
   width: auto;
   padding: 10px 18px;
-  background-color: #f44336;
+  background-color: #f44336; color:white;
 }
 
 /* Center the image and position the close button */
@@ -88,11 +86,10 @@ span.psw {
   overflow: auto; /* Enable scroll if needed */
   background-color: rgb(0,0,0); /* Fallback color */
   background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-  padding-top: 60px;
-}
+  padding-top: 60px; }
 
 /* Modal Content/Box */
-.modal-content {
+.modal-content {border-radius: 10px;
   background-color: #fefefe;
   margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
   border: 1px solid #888;
@@ -137,17 +134,57 @@ span.psw {
      display: block;
      float: none;
   }
-  .cancelbtn {
-     width: 100%;
+ 
+   .cancelbtn:hover {
+      opacity: 0.8;
   }
+ 
 }
 
 .cnt{margin-top:200px;
 text-align: center;
 }
 
-.btnhm{
-opacity: 0.8;
+
+
+.input-container {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.icon {
+  padding: 10px;
+  background: dodgerblue;
+  color: white;
+  min-width: 50px;
+  text-align: center;
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid dodgerblue;
+}
+
+.input-field:focus {
+  border: 1px solid dodgerblue;
+}
+
+/* Set a style for the submit button */
+.btnlg {
+  background-color: dodgerblue;
+  color: white;
+  padding: 15px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.btn:hover {
+  opacity: 1;
 }
 </style>
 </head>
@@ -156,7 +193,7 @@ opacity: 0.8;
 			Home <i class="fa fa-home" style="font-size:18px"></i></button>
 <div class="cnt">
 <h1 style="color:white;">Admin Login</h1>
-<button class="buttonL" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+<button class="buttonL" onclick="document.getElementById('id01').style.display='block'" >Login</button>
 
 </div>
 
@@ -169,14 +206,16 @@ opacity: 0.8;
     </div>
 
     <div class="container">
-      <label for="uname"><b>User Name</b></label>
-      <input type="text" placeholder="Enter Username" name="uname" required>
-
-      <label for="psw"><b>Password</b></label>
-      <input type="password" placeholder="Enter Password" name="pswd" required>
-        
-      <button type="submit">Login</button>
-
+    	<div class="input-container">
+    		<i class="fa fa-user icon"></i>
+   			<input type="text" class="input-field" placeholder="Enter Username" name="uname" required>
+		</div>
+		
+	<div class="input-container">
+    	<i class="fa fa-key icon"></i>
+    	<input class="input-field" type="password" placeholder="Password" name="pswd">
+     </div>   
+      <button type="submit" class="btnlg">Login</button>
     </div>
 
     <div class="container" style="background-color:#f1f1f1">
@@ -196,6 +235,10 @@ window.onclick = function(event) {
         modal.style.display = "none";
     }
 }
+
+
+
+
 </script>
 
 </body>

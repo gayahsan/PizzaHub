@@ -15,64 +15,58 @@
 	integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn"
 	crossorigin="anonymous">
 <style>
-/* header */
 .header {
-	background-image: url("Images/food-3309418_1920.jpg");
-	background-repeat: no-repeat;
-	background-size: cover;
-	padding: 30px;
-	text-align: center;
+   background-image: url("Images/headerImg2.jpg");
+   background-repeat: no-repeat;
+  background-size: cover;
+  height: 150px;
 }
 
 #navbar {
-	overflow: hidden;
-	background-color: #333;
+  overflow: hidden;
+  background-color: #99973f;
+  z-index: 2;
 }
 
 #navbar a {
-	float: left;
-	display: block;
-	color: #f2f2f2;
-	text-align: center;
-	padding: 14px 16px;
-	text-decoration: none;
-	font-size: 17px;
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
 }
 
 #navbar a:hover {
-	background-color: #ddd;
-	color: black;
+  background-color: #f7eb65;
+  color: black;
 }
 
 #navbar a.active {
-	background-color: #04AA6D;
-	color: white;
+  background-color: #04AA6D;
+  color: white;
 }
 
 .sticky {
-	position: fixed;
-	top: 0;
-	width: 100%;
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 
-.sticky+.content {
-	padding-top: 70px;
+.sticky + .content {
+  padding-top: 70px;
 }
 
 .searchBar {
-	float: right;
-	padding: 6px;
-	margin-top: 8px;
-	margin-right: 16px;
-	border: none;
-	border-radius: 5px;
-	font-size: 17px;
+  float: right;
+  padding: 6px;
+  margin-top: 8px;
+  margin-right: 16px;
+  border: none;
+  border-radius: 5px;
+  font-size: 17px;
 }
-
-.fter {
-	position: fixed;
-}
-
 /* /header */
 </style>
 
@@ -81,18 +75,24 @@
 </head>
 <body>
 	<!-- header -->
-	<div class="header">
-		<h2 style="color: white;">Pizza Hub</h2>
-		<p style="color: white;">We have excellent quality of pizza</p>
+<div class="header">
+	<img src="Images/PizzaHubLogo-removebg.png" style="float:left; height: 130px; width: 200px;">
+	<div class="headertxt">
+	<h2 class="headertxt1">Pizza Hub</h2>
+  	<p class="headertxt2">We have excellent quality of pizza</p>
 	</div>
+</div>
 
-	<div id="navbar">
-		<a class="active" href="#!">Home</a> <a href="AdminLogin.jsp">Admin</a>
-		<a href="javascript:void(0)">Contact</a> <input class="searchBar"
-			type="text" placeholder="Search..">
-	</div>
+<div id="navbar">
+  <a  href="Home.jsp">Home</a>
+  <a href="javascript:void(0)">Menu</a>
+  <a href="javascript:void(0)">Order Now</a>
+  <a href="javascript:void(0)">Contact</a>
+  <input class="searchBar" type="text" placeholder="Search..">
+</div>
 
-	<!--/ header -->
+<!--/ header -->
+
 	<div class="content">
 		<form>
 			<div class="form-group">

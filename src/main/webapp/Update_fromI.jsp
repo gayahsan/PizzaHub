@@ -32,30 +32,31 @@ while(resultSet.next()){
 <meta charset="ISO-8859-1">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
-
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
 <style>
 .icon-bar {
   width: 100%;
   background-color:#f2f2f0;
   overflow: hidden;
   position: fixed;
-  height: 60px; border-bottom: 1px solid gray;
+  height: 50px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+.searchM{width: 55%;float: left;height: 50px; background-color:#f1f1f1; border: none; color:color:black; padding-left:15px; }
+.notiM{ width: 10%;float: left; height: 50px; padding-left:20px;background-color:#f1f1f1;color:black; padding-top: 10px;}
+.msgM{ width: 10%;float: left; height: 50px; padding-left:20px;background-color:#f1f1f1;color:black; padding-top: 10px;}
+.lgoutbtnM{ width: 25%;float: left; height: 50px; padding-left:20px;background-color:#999696;color:#c9c6c5; padding-top: 10px;}
+.lgoutbtnM:hover{ background-color:#c9c6c5;color:#999696; }
 
 .icon-bar a {
-  float: left;
-  width: 20%;
   text-align: center;
- padding: 12px 0 12px 0;
   transition: all 0.3s ease;
   color: black;
   font-size: 18px;
   text-decoration: none;
 }
 
-.icon-bar a:hover {
- 
-}
+.sidebarG1{ margin-top: 20px;}
 
 body {
   margin: 0;
@@ -63,17 +64,16 @@ body {
 }
 
 .sidebar {
-  margin: 60px 0 0 0;
-  padding: 0;
-  width: 200px;
-  background-color: #f1f1f1;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  width: 215px;
+  background-color:#e6e3e3;
   position: fixed;
   height: 100%;
   overflow: auto;
 }
 
 .adminlogo{
-	width: 50px; height: 40px; margin-left: -100px; margin-bottom: 10px;
+	width: 50px; height: 40px;
 }
 
 .adminlogo2{
@@ -225,7 +225,7 @@ margin: 20px 0px 100px 100px;
 .lbl {
 	font-weight: 500;
 }
-
+.addedImg{ height: 300px; width: 300px; border: 1px solid black; }
 .inpt {
 	border: 1px outset silver;
 }
@@ -236,79 +236,87 @@ margin: 20px 0px 100px 100px;
 
 </style>
 </head>
-<div class="icon-bar">
-  <a href="#"><img class="adminlogo" src="Images/admin logo.png">  Administrator</a> 
-  <a href="#"><i class="fa fa-search"></i></a> 
-  <a href="#"><i class="fa fa-globe"></i></a>
-  <a href="#"><i class="fa fa-globe"></i></a>
-  <div id="myBtn"><a href="#"><img class="adminlogo2" src="Images/adminAvatar.png" > Log out</a></div> 
-</div>
-
 <div class="sidebar">
-  <a  href="AdminDashboard.jsp">Home</a>
-  <a class="active" href="AddItem.jsp">Add Items</a>
-  <a href="#">Search Items</a>
-  <a href="ViewItems.jsp">View Items</a>
-  <a href="#">Generate Report</a>
+  <div style="height: 60px;padding-top: 10px;"><img class="adminlogo" src="Images/admin logo.png">  Administrator</div>
+  <div class="sidebarG1">
+  <a class="active" href="AdminDashboard.jsp"><i class='fas fa-home' style='font-size:20px;color:black'></i>  Dashboard</a>
+  <a href="AddItem.jsp"><i class='far fa-plus-square' style='font-size:20px;color:blue'></i> Add Items</a>
+  <a href="#"><i class='fas fa-search' style='font-size:20px;color:green'></i> Search Items</a>
+  <a href="ViewItems.jsp"><i class='fas fa-table' style='font-size:20px;color:brown'></i> View Items</a>
+  <a href="#"><i class='fas fa-download' style='font-size:20px;color:black'></i> Generate Report</a>
+  </div>
+  
 </div>
 
 <div class="content">
+	<div class="icon-bar">
+	  <div class="searchM" ></div>
+	  <a class="notiM" href="#"><i class="material-icons" style="font-size:25px">notifications</i><span class="badge">8</span></a>
+	  <a class="msgM" href="#"><i class="material-icons" style="font-size:25px">chat</i><span class="badge">3</span></a>
+	  <div id="myBtn" class="lgoutbtnM"><a href="#"> Log out</a></div> 
+	</div>
 	<div class="Bodycontent">
 	<h3>Update Item</h3>
 		<div class="formBody">
 			<form method="post" action="UpdateFlnServlet" class=" needs-validation"  novalidate>
-				
-			<div class="mb-3">
-			  <label class="form-label lbl">Item ID</label>
-			  <input type="text" name="itemID" class="form-control inpt" value="<%=resultSet.getString("itemID") %>" readonly>
-			</div>
 			
-			<div class="mb-3">
-			  <label class="form-label lbl">Item Name</label>
-			  <input type="text" name="itemName" class="form-control inpt" value="<%=resultSet.getString("itemName") %>" required>
-			  <div class="invalid-feedback">
-				      Item Name is compulsory.
+			
+			
+			<div class="mb-3 row g-3">
+				<div class="col-md-7">
+				  <label class="form-label lbl">Item ID</label>
+				  <input type="text" name="itemID" class="form-control form-control-sm inpt" value="<%=resultSet.getString("itemID") %>" readonly>
+				</div>
+					
+				<div class="col-md-5">
+					<label class="form-label lbl">Item Name</label>
+					  <input type="text" name="itemName" class="form-control form-control-sm inpt" value="<%=resultSet.getString("itemName") %>" required>
+					  <div class="invalid-feedback">
+						      Item Name is compulsory.
+					   </div>
 				</div>
 			</div>
 			
 			<div class="mb-3">
 			  <label class="form-label lbl">Item Description</label>
-			  <input type="text" name="itemDescription" class="form-control inpt" value="<%=resultSet.getString("itemDescription") %>" required>
+			  <input type="text" name="itemDescription" style="min-height:50px;" class="form-control form-control-sm inpt" value="<%=resultSet.getString("itemDescription") %>" required>
 			  <div class="invalid-feedback">
 				      Item description is compulsory.
 				</div>
 			</div>
 			
-			<div class="mb-3">
-			  <label class="form-label lbl">Item Category</label>
-			  <select  name="itemCategory" class="form-control inpt" required>
-			  	<option selected value="<%=resultSet.getString("itemCategory") %>"><%=resultSet.getString("itemCategory") %></option>
-			  	<option value="Pizza">Pizza</option>
-			  	<option value="Appetizer">Appetizer</option>
-			  	<option value="Rice">Rice</option>
-			  	<option value="Beverages">Beverages</option>
-			  </select>
-			  <div class="invalid-feedback">
-				      Item category is compulsory.
-				</div>
-			</div>
 			
-			<div class="mb-3">
-			  <label class="form-label lbl">Item Price</label>
-			  <input type="text" name="itemPrice" class="form-control inpt" value="<%=resultSet.getString("itemPrice") %>" required>
+			
+			<div class="mb-3 row g-3">
+				<div class="col-md-7">
+					<label class="form-label lbl">Item Category</label>
+						  <select  name="itemCategory" class="form-control form-control-sm inpt" required>
+						  	<option selected value="<%=resultSet.getString("itemCategory") %>"><%=resultSet.getString("itemCategory") %></option>
+						  	<option value="Pizza">Pizza</option>
+						  	<option value="Appetizer">Appetizer</option>
+						  	<option value="Rice">Rice</option>
+						  	<option value="Beverages">Beverages</option>
+						  </select>
+				  <div class="invalid-feedback">
+					      Item category is compulsory.
+					</div>
+				</div>	
+				<div class="col-md-5">
+					<label class="form-label lbl">Item Price</label>
+			  <input type="text" name="itemPrice" class="form-control form-control-sm inpt" value="<%=resultSet.getString("itemPrice") %>" required>
 			  <div class="invalid-feedback">
 				      Item price is compulsory.
 				</div>
-			</div>
-			
+				</div>
+			</div>			
 			<div class="mb-3">
 			  <label class="form-label lbl">Item image</label>
-			  <input type="text" name="itemImage" class="form-control inpt" value="<%=resultSet.getString("itemImage") %>" required>
+			  <img class="addedImg" src="Images/<%=resultSet.getString("itemImage") %>">
+			  <input style="display: none;" type="text" name="itemImage" class="form-control form-control-sm inpt" value="<%=resultSet.getString("itemImage") %>" required>
 			</div>
 			
-			<div class="mb-3">
+			<div class="mb-3" style=" margin:50px 0px 0px 170px;">
 			  <button class="btn btn-primary" style="width: 200px;" type="submit">Update</button>
-			 
 			  <a href="ViewItems.jsp" class="btn btn-danger" style="width: 200px;" >Cancel</a>
 			</div>
 			</form>

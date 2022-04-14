@@ -31,30 +31,31 @@ ResultSet resultSet = null;
 <link href="./Styles/Semantic-UI-CSS-master/semantic.css" rel="stylesheet" type="text/css" >
 <script src="./Styles/Semantic-UI-CSS-master/semantic.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
 <style>
 .icon-bar {
   width: 100%;
   background-color:#f2f2f0;
   overflow: hidden;
   position: fixed;
-  height: 60px;
-  border-bottom: 1px solid gray;
+  height: 50px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+.searchM{width: 55%;float: left;height: 50px; background-color:#f1f1f1; border: none; color:color:black; padding-left:15px; }
+.notiM{ width: 10%;float: left; height: 50px; padding-left:20px;background-color:#f1f1f1;color:black; padding-top: 10px;}
+.msgM{ width: 10%;float: left; height: 50px; padding-left:20px;background-color:#f1f1f1;color:black; padding-top: 10px;}
+.lgoutbtnM{ width: 25%;float: left; height: 50px; padding-left:20px;background-color:#999696;color:#c9c6c5; padding-top: 10px;}
+.lgoutbtnM:hover{ background-color:#c9c6c5;color:#999696; }
 
 .icon-bar a {
-  float: left;
-  width: 20%;
   text-align: center;
- padding: 12px 0 12px 0;
   transition: all 0.3s ease;
   color: black;
   font-size: 18px;
   text-decoration: none;
 }
 
-.icon-bar a:hover {
- 
-}
+.sidebarG1{ margin-top: 20px;}
 
 body {
   margin: 0;
@@ -62,17 +63,16 @@ body {
 }
 
 .sidebar {
-  margin: 60px 0 0 0;
-  padding: 0;
-  width: 200px;
-  background-color: #f1f1f1;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  width: 215px;
+  background-color:#e6e3e3;
   position: fixed;
   height: 100%;
   overflow: auto;
 }
 
 .adminlogo{
-	width: 50px; height: 40px; margin-left: -100px; margin-bottom: 10px;
+	width: 50px; height: 40px;
 }
 
 .adminlogo2{
@@ -233,37 +233,95 @@ margin: 20px 40px 100px 40px;
 	border: 1px outset silver; padding-bottom: 35px;
 }
 
+.updt{ color: #0010bd; }
+.updt:hover{ text-decoration: none;opacity: 0.8;color: #2c3bde;}
+.dlt{ color: #bd0000;}
+.dlt:hover{ text-decoration: none;opacity: 0.8;color: #de2c2c;}
+
+/* Pagination links */
+.pagination {border-radius:10px;
+background-color:white;
+  left:70px;
+  bottom:15px;
+}
+
+
+.pagination a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background-color .3s;
+}
+
+/* Style the active/current link */
+.pagination a.active {
+  background-color: dodgerblue;
+  color: white;
+}
+.addedImg{ height: 100px; width: 100px; border: 1px solid black; }
+.addedImg:hover{ -ms-transform: scale(2); /* IE 9 */
+  -webkit-transform: scale(2); /* Safari 3-8 */
+  transform: scale(2);transition-duration: 3s; }
+/* Add a grey background color on mouse-over */
+.pagination a:hover:not(.active) {background-color: #ddd;}
+
+
+#myBtn2 {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: red;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+#myBtn2:hover {
+  background-color: #555;
+}
+
 
 </style>
 <title>All items</title>
 </head>
 <body>
-<div class="icon-bar">
-  <a href="#"><img class="adminlogo" src="Images/admin logo.png">  Administrator</a> 
-  <a href="#"><i class="fa fa-search"></i></a> 
-  <a href="#"><i class="fa fa-globe"></i></a>
-  <a href="#"><i class="fa fa-globe"></i></a>
-  <div id="myBtn"><a href="#"><img class="adminlogo2" src="Images/adminAvatar.png" > Log out</a></div> 
-</div>
-
+<button onclick="topFunction()" id="myBtn2" title="Go to top">Top</button>
 <div class="sidebar">
-  <a  href="AdminDashboard.jsp">Home</a>
-  <a href="AddItem.jsp">Add Items</a>
-  <a href="#">Search Items</a>
-  <a class="active" href="ViewItems.jsp">View Items</a>
-  <a href="#">Generate Report</a>
+  <div style="height: 60px;padding-top: 10px;"><img class="adminlogo" src="Images/admin logo.png">  Administrator</div>
+  <div class="sidebarG1">
+  <a href="AdminDashboard.jsp"><i class='fas fa-home' style='font-size:20px;color:black'></i>  Dashboard</a>
+  <a href="AddItem.jsp"><i class='far fa-plus-square' style='font-size:20px;color:blue'></i> Add Items</a>
+  <a href="#"><i class='fas fa-search' style='font-size:20px;color:green'></i> Search Items</a>
+  <a class="active" href="ViewItems.jsp"><i class='fas fa-table' style='font-size:20px;color:brown'></i> View Items</a>
+  <a href="#"><i class='fas fa-download' style='font-size:20px;color:black'></i> Generate Report</a>
+  </div>
+  
 </div>
 
 <div class="content">
+	<div class="icon-bar">
+	  <div class="searchM" ></div>
+	  <a class="notiM" href="#"><i class="material-icons" style="font-size:25px">notifications</i><span class="badge">8</span></a>
+	  <a class="msgM" href="#"><i class="material-icons" style="font-size:25px">chat</i><span class="badge">3</span></a>
+	  <div id="myBtn" class="lgoutbtnM"><a href="#"> Log out</a></div> 
+	</div>
 	<div class="Bodycontent">
 	<h3>All Items</h3>
+	<!-- <input class="searchBar" type="text" placeholder="Search.."> -->
 		<div class="formBody">
-		<table  class="ui selectable singel line table tblS">
+		<table class="table table-striped tblS" >
 				<thead>
 					<tr>
 						<th>Item Code</th>
 						<th>Item Name</th>
-						<th>Description</th>
+						<th >Description</th>
 						<th>Category</th>
 						<th>Price</th>
 						<th>Image</th>
@@ -281,14 +339,14 @@ margin: 20px 40px 100px 40px;
 				while(resultSet.next()){
 				%>
 				<tr>
-				<td><%=resultSet.getString("itemID") %></td>
-				<td><%=resultSet.getString("itemName") %></td>
-				<td><%=resultSet.getString("itemDescription") %></td>
-				<td><%=resultSet.getString("itemCategory") %></td>
-				<td><%=resultSet.getString("itemPrice") %></td>
-				<td><%=resultSet.getString("itemImage") %></td>
-				<td><a href="Update_fromI.jsp?itemID=<%=resultSet.getString("itemID")%>">Update <i class="fa fa-edit" style="font-size:16px"></i></a></td>
-				<td><a href="Delete_fromI.jsp?itemID=<%=resultSet.getString("itemID")%>">Delete <i class="fa fa-trash" style="font-size:16px"></i></a></td>
+				<td style="max-width: 50px;"><%=resultSet.getString("itemID") %></td>
+				<td style="max-width: 80px;"><%=resultSet.getString("itemName") %></td>
+				<td style="max-width: 200px;"><%=resultSet.getString("itemDescription") %></td>
+				<td style="word-wrap: break-word; max-width: 100px;"><%=resultSet.getString("itemCategory") %></td>
+				<td style="max-width: 50px;"><%=resultSet.getString("itemPrice") %></td>
+				<td style="max-width: 200px;"><img class="addedImg" src="Images/<%=resultSet.getString("itemImage") %>"></td>
+				<td style="max-width: 90px;"><a class="updt" href="Update_fromI.jsp?itemID=<%=resultSet.getString("itemID")%>">Update <i class="fa fa-edit" style="font-size:16px"></i></a></td>
+				<td style="max-width: 90px;"><a class="dlt" href="Delete_fromI.jsp?itemID=<%=resultSet.getString("itemID")%>">Delete <i class="fa fa-trash" style="font-size:16px"></i></a></td>
 				</tr>
 				<%
 				}
@@ -299,6 +357,17 @@ margin: 20px 40px 100px 40px;
 				%>
 				</table>
 		</div>
+		
+<div class="pagination">
+  <a href="#">&laquo;</a>
+  <a class="active" href="#">1</a>
+  <a  href="#">2</a>
+  <a href="#">3</a>
+  <a href="#">4</a>
+  <a href="#">5</a>
+  <a href="#">6</a>
+  <a href="#">&raquo;</a>
+</div>
 	</div>
 </div>
 <!-- The Modal -->
@@ -318,6 +387,7 @@ margin: 20px 40px 100px 40px;
   </div>
 
 </div>
+
 </body>
 <script>
 
@@ -345,6 +415,27 @@ window.onclick = function(event) {
 if (event.target == modal) {
  modal.style.display = "none";
 }
+}
+
+
+
+//Get the button
+var mybutton = document.getElementById("myBtn2");
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
 }
 </script>
 </html>

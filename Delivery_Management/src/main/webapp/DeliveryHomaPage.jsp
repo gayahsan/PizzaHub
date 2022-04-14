@@ -19,45 +19,122 @@
 	integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
 	crossorigin="anonymous"></script>
 
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet"
+	href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+	integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+	crossorigin="anonymous">
+<link rel="stylesheet"
+	href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+	integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn"
+	crossorigin="anonymous">
+
+<!-- header css js malshan -->
+<style>
+.header {
+	background-image: url("photos/headerImg2.jpeg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 150px;
+}
+
+body {
+	background-image: url("photos/bacground.jpeg");
+	background-repeat: repeat;
+}
+
+#navbar {
+	overflow: hidden;
+	background-color: #99973f;
+	z-index: 2;
+}
+
+#navbar a {
+	float: left;
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	font-size: 17px;
+}
+
+#navbar a:hover {
+	background-color: #f7eb65;
+	color: black;
+}
+
+#navbar a.active {
+	background-color: #04AA6D;
+	color: white;
+}
+
+.sticky {
+	position: fixed;
+	top: 0;
+	width: 100%;
+}
+
+.sticky+.content {
+	padding-top: 70px;
+}
+
+.searchBar {
+	float: right;
+	padding: 6px;
+	margin-top: 8px;
+	margin-right: 16px;
+	border: none;
+	border-radius: 5px;
+	font-size: 17px;
+}
+</style>
+
+<script>
+	window.onscroll = function() {
+		myFunction()
+	};
+
+	var navbar = document.getElementById("navbar");
+	var sticky = navbar.offsetTop;
+
+	function myFunction() {
+		if (window.pageYOffset >= sticky) {
+			navbar.classList.add("sticky")
+		} else {
+			navbar.classList.remove("sticky");
+		}
+	}
+</script>
+<!-- end of header css js malshan -->
+
 </head>
 <body>
 
-	<!-- Navbar -->
-	<nav class="navbar navbar-expand-lg navbar-light bg-light">
-		<a class="navbar-brand" href="#">PizzaHUBS</a>
-		<button class="navbar-toggler" type="button" data-toggle="collapse"
-			data-target="#navbarSupportedContent"
-			aria-controls="navbarSupportedContent" aria-expanded="false"
-			aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon"></span>
-		</button>
-
-		<div class="collapse navbar-collapse" id="navbarSupportedContent">
-			<ul class="navbar-nav mr-auto">
-				<li class="nav-item active"><a class="nav-link" href="#">Home
-						<span class="sr-only">(current)</span>
-				</a></li>
-				<li class="nav-item"><a class="nav-link" href="#">Link</a></li>
-				<li class="nav-item dropdown"><a
-					class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
-					role="button" data-toggle="dropdown" aria-expanded="false">
-						Dropdown </a>
-					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-						<a class="dropdown-item" href="#">Action</a> <a
-							class="dropdown-item" href="#">Another action</a>
-						<div class="dropdown-divider"></div>
-						<a class="dropdown-item" href="#">Something else here</a>
-					</div></li>
-				<li class="nav-item"><a class="nav-link disabled">Disabled</a>
-				</li>
-			</ul>
-			<form class="form-inline my-2 my-lg-0">
-				<input class="form-control mr-sm-2" type="search"
-					placeholder="Search" aria-label="Search">
-				<button class="btn btn-outline-dark" type="submit">Search</button>
-			</form>
+	<!-- header malshm -->
+	<div class="header">
+		<img src="photos/pizHub.jpeg"
+			style="float: left; height: 130px; width: 200px;">
+		<div class="headertxt">
+			<h2 class="headertxt1"
+				style="position: absolute; margin-top: 10px; margin-left: 996px; font-size: 200%; color: white;">Pizza
+				Hub</h2>
+			</br>
+			<h4 class="headertxt2"
+				style="position: absolute; margin-top: 20px; margin-left: 960px; font-size: 150%; color: white;">We
+				have excellent quality of pizza</h4>
 		</div>
-	</nav>
+	</div>
+
+	<div id="navbar">
+		<a href="Home.jsp">Home</a> <a href="javascript:void(0)">Menu</a> <a
+			href="javascript:void(0)">Order Now</a> <a href="javascript:void(0)">Contact</a>
+		<input class="searchBar" type="text" placeholder="Search..">
+	</div>
+	</br>
+
+	<!--/ header -->
 
 
 
@@ -104,16 +181,16 @@
 				<div class="card-footer">
 					<small class="text-muted">Last updated 3 mins ago</small> <br>
 					<center>
-						<button onclick="myFunction2()">CONTACT US</button>
+						<button style="background-color: #4CAF50; /* Green */ border: none; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px;" onclick="myFunction2()">Takeaway Option</button>
 					</center>
 					<br>
 
 					<script>
-		function myFunction2() {
-		  location.replace("./DeliveryPersonalyPicIt.jsp")
-		  
-		}
-	</script>
+						function myFunction2() {
+							location.replace("./DeliveryPersonalyPicIt.jsp")
+
+						}
+					</script>
 				</div>
 			</div>
 
@@ -133,17 +210,17 @@
 				<div class="card-footer">
 					<small class="text-muted">Last updated 3 mins ago</small> <br>
 					<center>
-						<button onclick="location.href = 'DeliveryHomeIns'">GET
+						<button style="background-color: #4CAF50; /* Green */ border: none; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px;" onclick="location.href = 'DeliveryHomeIns'">GET
 							HOME DELIVERY</button>
 					</center>
 					<br>
 
 					<script>
-		function myFunction1() {
-		  location.replace("./DeliveryInsert.jsp")
-		  
-		}
-	</script>
+						function myFunction1() {
+							location.replace("./DeliveryInsert.jsp")
+
+						}
+					</script>
 				</div>
 			</div>
 
@@ -171,29 +248,22 @@
 		<div class="container p-4">
 			<!-- Section: Social media -->
 			<section class="mb-4">
+
 				<!-- Facebook -->
-				<a class="btn btn-outline-light btn-floating m-1" href="#!"
-					role="button"><i class="fab fa-facebook-f"></i></a>
-
+				<a class="btn btn-outline-light btn-floating m-1 fa fa-facebook"
+					href="#!" role="button"></a>
 				<!-- Twitter -->
-				<a class="btn btn-outline-light btn-floating m-1" href="#!"
-					role="button"><i class="fab fa-twitter"></i></a>
-
+				<a class="btn btn-outline-light btn-floating m-1 fa fa-twitter"
+					href="#!" role="button"></a>
 				<!-- Google -->
-				<a class="btn btn-outline-light btn-floating m-1" href="#!"
-					role="button"><i class="fab fa-google"></i></a>
-
+				<a class="btn btn-outline-light btn-floating m-1 fa fa-google"
+					href="#!" role="button"></a>
 				<!-- Instagram -->
-				<a class="btn btn-outline-light btn-floating m-1" href="#!"
-					role="button"><i class="fab fa-instagram"></i></a>
-
+				<a class="btn btn-outline-light btn-floating m-1 fa fa-instagram"
+					href="#!" role="button"></a>
 				<!-- Linkedin -->
-				<a class="btn btn-outline-light btn-floating m-1" href="#!"
-					role="button"><i class="fab fa-linkedin-in"></i></a>
-
-				<!-- Github -->
-				<a class="btn btn-outline-light btn-floating m-1" href="#!"
-					role="button"><i class="fab fa-github"></i></a>
+				<a class="btn btn-outline-light btn-floating m-1 fa fa-linkedin"
+					href="#!" role="button"></a>
 			</section>
 			<!-- Section: Social media -->
 
@@ -236,10 +306,10 @@
 
 			<!-- Section: Text -->
 			<section class="mb-4">
-				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
-					distinctio earum repellat quaerat voluptatibus placeat nam, commodi
-					optio pariatur est quia magnam eum harum corrupti dicta, aliquam
-					sequi voluptate quas.</p>
+				<p>Since its inception in 1993, Pizza Hub has fast become a
+					household name across Sri Lanka. With its first restaurant at Union
+					Place, Colombo 2, Pizza Hub became the first international
+					restaurant chain to begin operations in Sri Lanka.</p>
 			</section>
 			<!-- Section: Text -->
 
@@ -249,52 +319,52 @@
 				<div class="row">
 					<!--Grid column-->
 					<div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-						<h5 class="text-uppercase">Links</h5>
+						<h5 class="text-uppercase">Order Now</h5>
 
 						<ul class="list-unstyled mb-0">
-							<li><a href="#!" class="text-white">Link 1</a></li>
-							<li><a href="#!" class="text-white">Link 2</a></li>
-							<li><a href="#!" class="text-white">Link 3</a></li>
-							<li><a href="#!" class="text-white">Link 4</a></li>
+							<li><a href="#!" class="text-white">PROMOS</a></li>
+							<li><a href="#!" class="text-white">PIZZAS</a></li>
+							<li><a href="#!" class="text-white">PASTAS</a></li>
+							<li><a href="#!" class="text-white">APPETIZERS</a></li>
 						</ul>
 					</div>
 					<!--Grid column-->
 
 					<!--Grid column-->
 					<div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-						<h5 class="text-uppercase">Links</h5>
+						<h5 class="text-uppercase">About</h5>
 
 						<ul class="list-unstyled mb-0">
-							<li><a href="#!" class="text-white">Link 1</a></li>
-							<li><a href="#!" class="text-white">Link 2</a></li>
-							<li><a href="#!" class="text-white">Link 3</a></li>
-							<li><a href="#!" class="text-white">Link 4</a></li>
+							<li><a href="#!" class="text-white">CAREERS</a></li>
+							<li><a href="#!" class="text-white">FEEDBACK</a></li>
+							<li><a href="#!" class="text-white">HOTLINE</a></li>
+							<li><a href="#!" class="text-white">BEVERAGES</a></li>
 						</ul>
 					</div>
 					<!--Grid column-->
 
 					<!--Grid column-->
 					<div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-						<h5 class="text-uppercase">Links</h5>
+						<h5 class="text-uppercase">Policy</h5>
 
 						<ul class="list-unstyled mb-0">
-							<li><a href="#!" class="text-white">Link 1</a></li>
-							<li><a href="#!" class="text-white">Link 2</a></li>
-							<li><a href="#!" class="text-white">Link 3</a></li>
-							<li><a href="#!" class="text-white">Link 4</a></li>
+							<li><a href="#!" class="text-white">DESSERTS</a></li>
+							<li><a href="#!" class="text-white">TERMS & CONDITIONS</a></li>
+							<li><a href="#!" class="text-white"> Social Media</a></li>
+							<li><a href="#!" class="text-white">items </a></li>
 						</ul>
 					</div>
 					<!--Grid column-->
 
 					<!--Grid column-->
 					<div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-						<h5 class="text-uppercase">Links</h5>
+						<h5 class="text-uppercase">My Pizza Hub</h5>
 
 						<ul class="list-unstyled mb-0">
-							<li><a href="#!" class="text-white">Link 1</a></li>
-							<li><a href="#!" class="text-white">Link 2</a></li>
-							<li><a href="#!" class="text-white">Link 3</a></li>
-							<li><a href="#!" class="text-white">Link 4</a></li>
+							<li><a href="#!" class="text-white">SIGN IN / REGISTER</a></li>
+							<li><a href="#!" class="text-white">Find Us</a></li>
+							<li><a href="#!" class="text-white">logos</a></li>
+							<li><a href="#!" class="text-white">Chicken</a></li>
 						</ul>
 					</div>
 					<!--Grid column-->
@@ -308,12 +378,13 @@
 		<!-- Copyright -->
 		<div class="text-center p-3"
 			style="background-color: rgba(0, 0, 0, 0.2);">
-			© 2020 Copyright: <a class="text-white"
-				href="https://mdbootstrap.com/">MDBootstrap.com</a>
+			® 2022 PizzaHuB, Inc. All rights reserved. <a class="text-white"
+				href="https://mdbootstrap.com/"></a>
 		</div>
 		<!-- Copyright -->
 	</footer>
 	<!-- Footer -->
+
 
 
 

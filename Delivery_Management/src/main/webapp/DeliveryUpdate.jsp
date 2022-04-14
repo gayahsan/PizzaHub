@@ -20,36 +20,133 @@
 	integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
 	crossorigin="anonymous"></script>
 
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet"
+	href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+	integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+	crossorigin="anonymous">
+<link rel="stylesheet"
+	href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+	integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn"
+	crossorigin="anonymous">
+
+<!-- header css js malshan -->
 <style>
+.header {
+	background-image: url("photos/headerImg2.jpeg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 150px;
+}
+
+body {
+	background-image: url("photos/bacground.jpeg");
+	background-repeat: repeat;
+}
+
+#navbar {
+	overflow: hidden;
+	background-color: #99973f;
+	z-index: 2;
+}
+
+#navbar a {
+	float: left;
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	font-size: 17px;
+}
+
+#navbar a:hover {
+	background-color: #f7eb65;
+	color: black;
+}
+
+#navbar a.active {
+	background-color: #04AA6D;
+	color: white;
+}
+
+.sticky {
+	position: fixed;
+	top: 0;
+	width: 100%;
+}
+
+.sticky+.content {
+	padding-top: 70px;
+}
+
+.searchBar {
+	float: right;
+	padding: 6px;
+	margin-top: 8px;
+	margin-right: 16px;
+	border: none;
+	border-radius: 5px;
+	font-size: 17px;
+}
+</style>
+
+<script>
+	window.onscroll = function() {
+		myFunction()
+	};
+
+	var navbar = document.getElementById("navbar");
+	var sticky = navbar.offsetTop;
+
+	function myFunction() {
+		if (window.pageYOffset >= sticky) {
+			navbar.classList.add("sticky")
+		} else {
+			navbar.classList.remove("sticky");
+		}
+	}
+</script>
+<!-- end of header css js malshan -->
+
+<style>
+.container {
+	background-color: white;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	transition: 0.3s;
+	border-radius: 5px; /* 5px rounded corners */
+}
+
 .deli8 {
 	position: absolute;
-	margin-top: -351px;
-	margin-left: 702px;
+	margin-top: -403px;
+	margin-left: 557px;
 }
+
 input[type=text], select {
-  width: 100%;
-  padding: 5px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
+	padding: 5px 20px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
 }
 
 input[type=submit] {
-  width: 39%;
-  background-color: #4CAF50;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
+	width: 39%;
+	background-color: #4CAF50;
+	color: white;
+	padding: 14px 20px;
+	margin: 8px 0;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
 }
 
 input[type=submit]:hover {
-  background-color: #45a049;
-}	
+	background-color: #45a049;
+}
 </style>
 
 <script>
@@ -91,46 +188,34 @@ input[type=submit]:hover {
 	<%
 	DeliveryCustomer d = (DeliveryCustomer) request.getAttribute("ObDeli");
 	%>
-	<!-- Navbar -->
-	<nav class="navbar navbar-expand-lg navbar-light bg-light">
-		<a class="navbar-brand" href="#">PizzaHUBS</a>
-		<button class="navbar-toggler" type="button" data-toggle="collapse"
-			data-target="#navbarSupportedContent"
-			aria-controls="navbarSupportedContent" aria-expanded="false"
-			aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon"></span>
-		</button>
-
-		<div class="collapse navbar-collapse" id="navbarSupportedContent">
-			<ul class="navbar-nav mr-auto">
-				<li class="nav-item active"><a class="nav-link" href="#">Home
-						<span class="sr-only">(current)</span>
-				</a></li>
-				<li class="nav-item"><a class="nav-link" href="#">Link</a></li>
-				<li class="nav-item dropdown"><a
-					class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
-					role="button" data-toggle="dropdown" aria-expanded="false">
-						Dropdown </a>
-					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-						<a class="dropdown-item" href="#">Action</a> <a
-							class="dropdown-item" href="#">Another action</a>
-						<div class="dropdown-divider"></div>
-						<a class="dropdown-item" href="#">Something else here</a>
-					</div></li>
-				<li class="nav-item"><a class="nav-link disabled">Disabled</a>
-				</li>
-			</ul>
-			<form class="form-inline my-2 my-lg-0">
-				<input class="form-control mr-sm-2" type="search"
-					placeholder="Search" aria-label="Search">
-				<button class="btn btn-outline-dark" type="submit">Search</button>
-			</form>
+	<!-- header malshm -->
+	<div class="header">
+		<img src="photos/pizHub.jpeg"
+			style="float: left; height: 130px; width: 200px;">
+		<div class="headertxt">
+			<h2 class="headertxt1"
+				style="position: absolute; margin-top: 10px; margin-left: 996px; font-size: 200%; color: white;">Pizza
+				Hub</h2>
+			</br>
+			<h4 class="headertxt2"
+				style="position: absolute; margin-top: 20px; margin-left: 960px; font-size: 150%; color: white;">We
+				have excellent quality of pizza</h4>
 		</div>
-	</nav>
+	</div>
+
+	<div id="navbar">
+		<a href="Home.jsp">Home</a> <a href="javascript:void(0)">Menu</a> <a
+			href="javascript:void(0)">Order Now</a> <a href="javascript:void(0)">Contact</a>
+		<input class="searchBar" type="text" placeholder="Search..">
+	</div>
+	</br>
+
+	<!--/ header -->
 
 	<div class="container h-100">
 		<h1>Please Update The Details</h1>
 		</br>
+		<div class="tbleWitw"></div>
 		<table>
 			<form action="<%=request.getContextPath()%>/DeliveryUpdateServlet"
 				method="post" onsubmit="return InsertValidation()">
@@ -184,45 +269,40 @@ input[type=submit]:hover {
 		</table>
 		<br> <input type="submit" name="submit" value="Update details">
 		</form>
+		<div class="deli8">
+			<img src="photos/deli8.jpg" alt="...">
+		</div>
+	</div>
+
 	</div>
 	</br>
 	</br>
 
-	<div class="deli8">
-		<img src="photos/deli8.jpg" alt="...">
-	</div>
+
 
 
 
 	<!-- Footer -->
 	<footer class="bg-dark text-center text-white">
 		<!-- Grid container -->
-		<div class="container p-4">
+		<div class=" p-4">
 			<!-- Section: Social media -->
 			<section class="mb-4">
 				<!-- Facebook -->
-				<a class="btn btn-outline-light btn-floating m-1" href="#!"
-					role="button"><i class="fab fa-facebook-f"></i></a>
-
+				<a class="btn btn-outline-light btn-floating m-1 fa fa-facebook"
+					href="#!" role="button"></a>
 				<!-- Twitter -->
-				<a class="btn btn-outline-light btn-floating m-1" href="#!"
-					role="button"><i class="fab fa-twitter"></i></a>
-
+				<a class="btn btn-outline-light btn-floating m-1 fa fa-twitter"
+					href="#!" role="button"></a>
 				<!-- Google -->
-				<a class="btn btn-outline-light btn-floating m-1" href="#!"
-					role="button"><i class="fab fa-google"></i></a>
-
+				<a class="btn btn-outline-light btn-floating m-1 fa fa-google"
+					href="#!" role="button"></a>
 				<!-- Instagram -->
-				<a class="btn btn-outline-light btn-floating m-1" href="#!"
-					role="button"><i class="fab fa-instagram"></i></a>
-
+				<a class="btn btn-outline-light btn-floating m-1 fa fa-instagram"
+					href="#!" role="button"></a>
 				<!-- Linkedin -->
-				<a class="btn btn-outline-light btn-floating m-1" href="#!"
-					role="button"><i class="fab fa-linkedin-in"></i></a>
-
-				<!-- Github -->
-				<a class="btn btn-outline-light btn-floating m-1" href="#!"
-					role="button"><i class="fab fa-github"></i></a>
+				<a class="btn btn-outline-light btn-floating m-1 fa fa-linkedin"
+					href="#!" role="button"></a>
 			</section>
 			<!-- Section: Social media -->
 

@@ -3,6 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
 <link rel="stylesheet"
@@ -18,97 +19,122 @@
 	integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
 	crossorigin="anonymous"></script>
 
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet"
+	href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+	integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+	crossorigin="anonymous">
+<link rel="stylesheet"
+	href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+	integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn"
+	crossorigin="anonymous">
+
+<!-- header css js malshan -->
+<style>
+.header {
+	background-image: url("photos/headerImg2.jpeg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 150px;
+}
+
+body {
+	background-image: url("photos/bacground.jpeg");
+	background-repeat: repeat;
+}
+
+#navbar {
+	overflow: hidden;
+	background-color: #99973f;
+	z-index: 2;
+}
+
+#navbar a {
+	float: left;
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	font-size: 17px;
+}
+
+#navbar a:hover {
+	background-color: #f7eb65;
+	color: black;
+}
+
+#navbar a.active {
+	background-color: #04AA6D;
+	color: white;
+}
+
+.sticky {
+	position: fixed;
+	top: 0;
+	width: 100%;
+}
+
+.sticky+.content {
+	padding-top: 70px;
+}
+
+.searchBar {
+	float: right;
+	padding: 6px;
+	margin-top: 8px;
+	margin-right: 16px;
+	border: none;
+	border-radius: 5px;
+	font-size: 17px;
+}
+</style>
+
+<script>
+	window.onscroll = function() {
+		myFunction()
+	};
+
+	var navbar = document.getElementById("navbar");
+	var sticky = navbar.offsetTop;
+
+	function myFunction() {
+		if (window.pageYOffset >= sticky) {
+			navbar.classList.add("sticky")
+		} else {
+			navbar.classList.remove("sticky");
+		}
+	}
+</script>
+<!-- end of header css js malshan -->
+
 </head>
 <body>
-	<nav class="navbar navbar-expand-lg navbar-light bg-light">
-		<a class="navbar-brand" href="#">PizzaHUBS</a>
-		<button class="navbar-toggler" type="button" data-toggle="collapse"
-			data-target="#navbarSupportedContent"
-			aria-controls="navbarSupportedContent" aria-expanded="false"
-			aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon"></span>
-		</button>
-
-		<div class="collapse navbar-collapse" id="navbarSupportedContent">
-			<ul class="navbar-nav mr-auto">
-				<li class="nav-item active"><a class="nav-link" href="#">Home
-						<span class="sr-only">(current)</span>
-				</a></li>
-				<li class="nav-item"><a class="nav-link" href="#">Link</a></li>
-				<li class="nav-item dropdown"><a
-					class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
-					role="button" data-toggle="dropdown" aria-expanded="false">
-						Dropdown </a>
-					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-						<a class="dropdown-item" href="#">Action</a> <a
-							class="dropdown-item" href="#">Another action</a>
-						<div class="dropdown-divider"></div>
-						<a class="dropdown-item" href="#">Something else here</a>
-					</div></li>
-				<li class="nav-item"><a class="nav-link disabled">Disabled</a>
-				</li>
-			</ul>
-			<form class="form-inline my-2 my-lg-0">
-				<input class="form-control mr-sm-2" type="search"
-					placeholder="Search" aria-label="Search">
-				<button class="btn btn-outline-dark" type="submit">Search</button>
-			</form>
+	<!-- header malshm -->
+	<div class="header">
+		<img src="photos/pizHub.jpeg"
+			style="float: left; height: 130px; width: 200px;">
+		<div class="headertxt">
+			<h2 class="headertxt1"
+				style="position: absolute; margin-top: 10px; margin-left: 996px; font-size: 200%; color: white;">Pizza
+				Hub</h2>
+			</br>
+			<h4 class="headertxt2"
+				style="position: absolute; margin-top: 20px; margin-left: 960px; font-size: 150%; color: white;">We
+				have excellent quality of pizza</h4>
 		</div>
-	</nav>
-
-
-
-
-
-
-	<div id="carouselExampleCaptions" class="carousel slide"
-		data-ride="carousel">
-		<ol class="carousel-indicators">
-			<li data-target="#carouselExampleCaptions" data-slide-to="0"
-				class="active"></li>
-			<li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
-			<li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
-		</ol>
-		<div class="carousel-inner">
-			<div class="carousel-item active">
-				<img src="photos/big-2530142_1920.jpg" class="img-fluid" alt="1 Hi">
-				<div class="carousel-caption d-none d-md-block">
-					<h5>First slide label</h5>
-					<p>Some representative placeholder content for the first slide.</p>
-				</div>
-			</div>
-			<div class="carousel-item">
-				<img src="photos/food-3309418_1920.jpg" class="img-fluid" alt="2 hi">
-				<div class="carousel-caption d-none d-md-block">
-					<h5>Second slide label</h5>
-					<p>Some representative placeholder content for the second
-						slide.</p>
-				</div>
-			</div>
-			<div class="carousel-item">
-				<img src="photos/plate-2802332_1920.jpg" class="img-fluid"
-					alt="3 hi">
-				<div class="carousel-caption d-none d-md-block">
-					<h5>Third slide label</h5>
-					<p>Some representative placeholder content for the third slide.</p>
-				</div>
-			</div>
-		</div>
-		<button class="carousel-control-prev" type="button"
-			data-target="#carouselExampleCaptions" data-slide="prev">
-			<span class="carousel-control-prev-icon" aria-hidden="true"></span> <span
-				class="sr-only">Previous</span>
-		</button>
-		<button class="carousel-control-next" type="button"
-			data-target="#carouselExampleCaptions" data-slide="next">
-			<span class="carousel-control-next-icon" aria-hidden="true"></span> <span
-				class="sr-only">Next</span>
-		</button>
 	</div>
 
+	<div id="navbar">
+		<a href="Home.jsp">Home</a> <a href="javascript:void(0)">Menu</a> <a
+			href="javascript:void(0)">Order Now</a> <a href="javascript:void(0)">Contact</a>
+		<input class="searchBar" type="text" placeholder="Search..">
+	</div>
+	</br>
 
-	</br>
-	</br>
+	<!--/ header -->
+
 
 
 
@@ -123,12 +149,6 @@
 
 		</div>
 	</div>
-
-
-
-
-
-	</br>
 	</br>
 
 	<div class="card-deck">
@@ -190,28 +210,20 @@
 			<section class="mb-4">
 
 				<!-- Facebook -->
-				<a class="btn btn-outline-light btn-floating m-1" href="#!"
-					role="button"><i class="fab fa-facebook-f"></i></a>
-
+				<a class="btn btn-outline-light btn-floating m-1 fa fa-facebook"
+					href="#!" role="button"></a>
 				<!-- Twitter -->
-				<a class="btn btn-outline-light btn-floating m-1" href="#!"
-					role="button"><i class="fab fa-twitter"></i></a>
-
+				<a class="btn btn-outline-light btn-floating m-1 fa fa-twitter"
+					href="#!" role="button"></a>
 				<!-- Google -->
-				<a class="btn btn-outline-light btn-floating m-1" href="#!"
-					role="button"><i class="fab fa-google"></i></a>
-
+				<a class="btn btn-outline-light btn-floating m-1 fa fa-google"
+					href="#!" role="button"></a>
 				<!-- Instagram -->
-				<a class="btn btn-outline-light btn-floating m-1" href="#!"
-					role="button"><i class="fab fa-instagram"></i></a>
-
+				<a class="btn btn-outline-light btn-floating m-1 fa fa-instagram"
+					href="#!" role="button"></a>
 				<!-- Linkedin -->
-				<a class="btn btn-outline-light btn-floating m-1" href="#!"
-					role="button"><i class="fab fa-linkedin-in"></i></a>
-
-				<!-- Github -->
-				<a class="btn btn-outline-light btn-floating m-1" href="#!"
-					role="button"><i class="fab fa-github"></i></a>
+				<a class="btn btn-outline-light btn-floating m-1 fa fa-linkedin"
+					href="#!" role="button"></a>
 			</section>
 			<!-- Section: Social media -->
 

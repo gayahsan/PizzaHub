@@ -37,10 +37,11 @@
 <!-- header css js malshan -->
 <style>
 .header {
-	background-image: url("photos/headerImg2.jpeg");
+	background-image: url("photos/pizza-blck2.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
 	height: 150px;
+	
 }
 
 body {
@@ -50,9 +51,10 @@ body {
 
 #navbar {
 	overflow: hidden;
-	background-color: #99973f;
+	background-color: #010101ba;
 	z-index: 2;
 }
+
 
 #navbar a {
 	float: left;
@@ -243,16 +245,8 @@ input[type=submit]:hover {
 	<!-- header malshm -->
 	<div class="header">
 		<img src="photos/pizHub.jpeg"
-			style="float: left; height: 130px; width: 200px;">
-		<div class="headertxt">
-			<h2 class="headertxt1"
-				style="position: absolute; margin-top: 10px; margin-left: 996px; font-size: 200%; color: white;">Pizza
-				Hub</h2>
-			</br>
-			<h4 class="headertxt2"
-				style="position: absolute; margin-top: 20px; margin-left: 960px; font-size: 150%; color: white;">We
-				have excellent quality of pizza</h4>
-		</div>
+			style="float: left;  height: 130px; width: 200px; border-radius: 25px;  padding: 15px;">
+		
 	</div>
 
 	<div id="navbar">

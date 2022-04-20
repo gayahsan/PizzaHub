@@ -34,20 +34,22 @@
 <!-- header css js malshan -->
 <style>
 .header {
-	background-image: url("photos/headerImg2.jpeg");
+	background-image: url("photos/pizza-blck2.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
 	height: 150px;
+	
 }
 
 body {
 	background-image: url("photos/bacground.jpeg");
 	background-repeat: repeat;
+	
 }
 
 #navbar {
 	overflow: hidden;
-	background-color: #99973f;
+	background-color: #010101ba;
 	z-index: 2;
 }
 
@@ -191,16 +193,8 @@ input[type=submit]:hover {
 	<!-- header malshm -->
 	<div class="header">
 		<img src="photos/pizHub.jpeg"
-			style="float: left; height: 130px; width: 200px;">
-		<div class="headertxt">
-			<h2 class="headertxt1"
-				style="position: absolute; margin-top: 10px; margin-left: 996px; font-size: 200%; color: white;">Pizza
-				Hub</h2>
-			</br>
-			<h4 class="headertxt2"
-				style="position: absolute; margin-top: 20px; margin-left: 960px; font-size: 150%; color: white;">We
-				have excellent quality of pizza</h4>
-		</div>
+			style="float: left;  height: 130px; width: 200px; border-radius: 25px;  padding: 15px;">
+		
 	</div>
 
 	<div id="navbar">
@@ -223,19 +217,19 @@ input[type=submit]:hover {
 				<tr>
 					<td>Full Name</td>
 					<td><input type="text" name="Fname" id="Fname"
-						value="<%=d.getFull_name()%>" placeholder="Eg: Thusi Alia"></td>
+						value="<%=d.getFull_name()%>" ></td>
 				</tr>
 
 				<tr>
 					<td>Address Line 01</td>
 					<td><input type="text" name="addLineOne"
-						value="<%=d.getAdd_line_01()%>" placeholder="Eg: Road" required></td>
+						value="<%=d.getAdd_line_01()%>"  required></td>
 				</tr>
 
 				<tr>
 					<td>Address Line 02</td>
 					<td><input type="text" name="addLineTwo"
-						value="<%=d.getAdd_line_02()%>" placeholder="Eg: Gampaha" required></td>
+						value="<%=d.getAdd_line_02()%>"  required></td>
 				</tr>
 
 
@@ -249,19 +243,19 @@ input[type=submit]:hover {
 				<tr>
 					<td>Province</td>
 					<td><input type="text" name="DeliveryPro"
-						value="<%=d.getProvince()%>" placeholder="Eg: Westen" required></td>
+						value="<%=d.getProvince()%>"  required></td>
 				</tr>
 
 				<tr>
 					<td>City</td>
 					<td><input type="text" name="eliveryCityy"
-						value="<%=d.getCity()%>" placeholder="Eg: Gampaha" required></td>
+						value="<%=d.getCity()%>"  required></td>
 				</tr>
 
 				<tr>
 					<td>Country</td>
 					<td><input type="text" name="DelivertCountry"
-						value="<%=d.getCountry()%>" placeholder="Eg: Sri Lanka" required></td>
+						value="<%=d.getCountry()%>"  required></td>
 				</tr>
 				<!--hidden values  -->
 				<input type="hidden" name="d_id" value="<%=d.getDelivery_id()%>">

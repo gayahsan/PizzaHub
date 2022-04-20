@@ -33,10 +33,11 @@
 <!-- header css js malshan -->
 <style>
 .header {
-	background-image: url("photos/headerImg2.jpeg");
+	background-image: url("photos/pizza-blck2.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
 	height: 150px;
+	
 }
 
 body {
@@ -46,10 +47,9 @@ body {
 
 #navbar {
 	overflow: hidden;
-	background-color: #99973f;
+	background-color: #010101ba;
 	z-index: 2;
 }
-
 #navbar a {
 	float: left;
 	display: block;
@@ -188,16 +188,8 @@ input[type=submit]:hover {
 	<!-- header malshm -->
 	<div class="header">
 		<img src="photos/pizHub.jpeg"
-			style="float: left; height: 130px; width: 200px;">
-		<div class="headertxt">
-			<h2 class="headertxt1"
-				style="position: absolute; margin-top: 10px; margin-left: 996px; font-size: 200%; color: white;">Pizza
-				Hub</h2>
-			</br>
-			<h4 class="headertxt2"
-				style="position: absolute; margin-top: 20px; margin-left: 960px; font-size: 150%; color: white;">We
-				have excellent quality of pizza</h4>
-		</div>
+			style="float: left;  height: 130px; width: 200px; border-radius: 25px;  padding: 15px;">
+		
 	</div>
 
 	<div id="navbar">
@@ -221,43 +213,43 @@ input[type=submit]:hover {
 				<tr>
 					<td>Full Name</td>
 					<td><input type="text" name="Fname" id="Fname"
-						placeholder="Eg: Thusi Alia"></td>
+						></td>
 				</tr>
 
 				<tr>
 					<td>Address Line 01</td>
 					<td><input type="text" name="addLineOne" id="addLineOne"
-						placeholder="Eg: Road"></td>
+						></td>
 				</tr>
 
 				<tr>
 					<td>Address Line 02</td>
 					<td><input type="text" name="addLineTwo" id="addLineTwo"
-						placeholder="Eg: Gampaha"></td>
+						></td>
 				</tr>
 
 				<tr>
 					<td>Postal Code</td>
 					<td><input type="text" name="PostalCo" id="PostalCo"
-						pattern="[0-9]{5}" placeholder="Eg: 12378"></td>
+						pattern="[0-9]{5}" ></td>
 				</tr>
 
 				<tr>
 					<td>Province</td>
 					<td><input type="text" name="DeliveryPro" id="DeliveryPro"
-						placeholder="Eg: Westen"></td>
+						></td>
 				</tr>
 
 				<tr>
 					<td>City</td>
 					<td><input type="text" name="eliveryCityy" id="eliveryCityy"
-						placeholder="Eg: Gampaha"></td>
+						></td>
 				</tr>
 
 				<tr>
 					<td>Country</td>
 					<td><input type="text" name="DelivertCountry"
-						id="DelivertCountry" placeholder="Eg: Sri Lanka"></td>
+						id="DelivertCountry" ></td>
 				</tr>
 				<tr>
 					<td>RegCust_ID</td>

@@ -28,10 +28,11 @@
 <!-- header css js malshan -->
 <style>
 .header {
-	background-image: url("photos/headerImg2.jpeg");
+	background-image: url("photos/pizza-blck2.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
 	height: 150px;
+	
 }
 
 .container {
@@ -48,9 +49,10 @@ body {
 
 #navbar {
 	overflow: hidden;
-	background-color: #99973f;
+	background-color: #010101ba;
 	z-index: 2;
 }
+
 
 #navbar a {
 	float: left;
